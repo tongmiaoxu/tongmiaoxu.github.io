@@ -1,20 +1,16 @@
 ---
 layout: post
-title:  "Decoupling Vision and Motion: Object-Centric Representations for Enhanced Manipulation"
+title:  "CORE: Canonical Object Representations for Enhanced Manipulation"
 date:   2024-12-05 21:21:53 +00:00
 image: /images/fail_infer.gif
 categories: current
-# course: "16-741 Mechanics of Manipulation"
 author: "Tongmiao Xu"
-course: "AdapComp,NUS"
-# authors: "<strong>Tongmiao Xu</strong>, Hanbo Zhang, David Hsu"
-venue: "2025 EEML Best Poster Award"
+course: "AdapComp Lab, NUS (advised by Dr. Hanbo Zhang and Prof. David Hsu)"
+venue: "B.S. Thesis, 2025 · 2025 EEML Best Poster Award"
+website: https://tongmiaoxu.github.io/CORE/
+thesis: https://github.com/tongmiaoxu/CORE/blob/main/files/thesis.pdf
 poster: /pdfs/eemlposter.pdf
-# video: https://youtu.be/gc_oKZokoeE
 video: https://youtube.com/shorts/QPWtQzla0Jk?si=lQayXjgqbNUSvfhf
-thesis: /pdfs/objectcentric.pdf
-code: https://github.com/Tamphie/SEIL
-# slides: /pdfs/slides.pdf
+code: https://github.com/tongmiaoxu/CORE
 ---
-A core challenge in robot imitation learning lies in the entanglement between a robot’s policy and its specific camera perspectives and object placements. This makes policy generalization difficult. We tackle this by proposing an object-centric learning framework that decouples observed object motions (vision) and robot actions (motion), allowing generalization over varying viewpoints and object positions.
-
+Imitation-learned policies break when the camera view or object placement changes. CORE decouples vision-based decision making from robot execution with a contact-anchored canonical object frame: point clouds and end-effector actions are expressed in that frame, so one policy generalizes across camera viewpoints, object placements and robot kinematics. On RLBench door opening it reaches 95% success on unseen placements, versus 30% for ACT and 15% for DP3.

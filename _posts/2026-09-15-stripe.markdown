@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "STRIPE: Sim-to-Real Image Translation for Real-to-Sim Policy Evaluation"
+date:   2026-09-15 10:00:00 +00:00
+image: /images/stripe.gif
+categories: research
+author: "Tongmiao Xu"
+authors: "<strong>Tongmiao Xu</strong>*, <a href=\"https://shivanshpatel35.github.io/\">Shivansh Patel</a>*, <a href=\"https://slazebni.cs.illinois.edu/\">Svetlana Lazebnik</a> (*equal contribution)"
+venue: "Under review at ICRA 2027"
+website: https://stripe-robot.github.io/
+---
+We present a real-to-sim policy evaluation framework that combines mesh-based scene reconstruction in MuJoCo, calibrated robot dynamics, and STRIPE, a learned image translator that maps simulated renders to real-camera appearance while preserving spatial layout. Across four manipulation tasks and four policy families (ACT, Diffusion Policy, GR00T N1.5, π0.5), STRIPE gives stronger sim-to-real success-rate correlation and policy rank agreement than raw rendering, classical color alignment, or Pix2Pix.
