@@ -3,7 +3,7 @@ layout: post
 title:  "Open-Sourcing the EarthRover: Bridging Robot Control and Learning with HuggingFace LeRobot"
 date:   2025-10-10 10:00:00 +00:00
 image: /images/earthrover.png
-categories: current
+categories: past
 course: "SIGRobotics, UIUC"
 venue: "Open-Source Robotics Collaboration with FrodoBots & HuggingFace"
 code: https://github.com/frodobots-org/earth-rover-mini

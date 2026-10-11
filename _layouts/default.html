@@ -231,7 +231,13 @@
         </table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
+          <!-- two passes: posts with `pin_last: true` are listed after the rest -->
+          {% for pass in (1..2) %}
           {% for post in site.posts %}
+          {% assign show = false %}
+          {% if pass == 1 and post.pin_last != true %}{% assign show = true %}{% endif %}
+          {% if pass == 2 and post.pin_last == true %}{% assign show = true %}{% endif %}
+          {% if show %}
           {% for cat in post.categories %}
           {% if cat == 'selected' %}
           <tr>
@@ -286,6 +292,8 @@
               {{ post.excerpt }}
             </td>
           </tr>
+          {% endif %}
+          {% endfor %}
           {% endif %}
           {% endfor %}
           {% endfor %}
