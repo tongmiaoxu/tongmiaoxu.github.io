@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dynamic Vision-Enabled Machine Condition Monitoring</title>
+  <meta name="description" content="Machine fault diagnosis from event-camera streams represented as 3D point clouds. IEEE PHM-Beijing 2024.">
+  <meta property="og:title" content="Dynamic Vision-Enabled Machine Condition Monitoring">
+  <meta property="og:image" content="https://tongmiaoxu.github.io/projects/img/phm-setup.jpg">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../page.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../">← All projects</a>
+
+  <header class="hero">
+    <h1>Dynamic Vision-Enabled Machine Condition Monitoring: A Point Cloud-Based Diagnostic Methodology</h1>
+    <p class="authors"><a href="https://tongmiaoxu.github.io/">Tongmiao Xu</a>, Dehao Cai, Shaojie Yang, Shuai Gu, <a href="https://gr.xjtu.edu.cn/web/lixiang">Xiang Li</a></p>
+    <p class="venue">Xi'an Jiaotong University · 2024 IEEE Global Reliability &amp; PHM Conference (PHM-Beijing)</p>
+    <div class="buttons">
+      <a href="https://ieeexplore.ieee.org/document/10874504"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/></svg>Paper</a>
+      <a href="https://youtu.be/kuyhhvMJwpQ"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Talk</a>
+      <a href="https://github.com/Tamphie/Dynamic_vision"><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>Code</a>
+    </div>
+  </header>
+
+  <figure class="narrow">
+    <img src="../img/phm-setup.jpg" alt="Test rig: motor, coupler and bearing, with an event-based camera aimed at the bearing; below, photos of inner race, outer race and ball faults">
+    <figcaption>An event camera watches a rotating bearing on the test rig. We classify four states: healthy, inner race fault, outer race fault and ball fault.</figcaption>
+  </figure>
+
+  <section>
+    <h2>Abstract</h2>
+    <p>This work is one of the first to use a 3D point cloud algorithm on event data for machine fault diagnosis. Event cameras (Dynamic Vision Sensors) report per-pixel brightness changes with microsecond timing, instead of full frames. We represent each slice of the event stream as a geometric point cloud over <em>(x, y, t)</em>, then classify it with a deep point cloud network (PointNet++). We test the method on diagnosing faults in a rotating machine with an event camera.</p>
+    <div class="grid">
+      <div class="stat"><b>Sensor</b><span>Event camera (DVS)</span></div>
+      <div class="stat"><b>Representation</b><span>Events as (x, y, t) point clouds</span></div>
+      <div class="stat"><b>Model</b><span>PointNet++ classifier</span></div>
+      <div class="stat"><b>Classes</b><span>Healthy · inner race · outer race · ball</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Events as point clouds</h2>
+    <figure>
+      <img src="../img/phm-roi.jpg" alt="Randomly sampled regions of interest from the event stream, shown as 3D point clouds" loading="lazy">
+      <figcaption>Randomly sampled regions of interest from the event stream. Each one shows how events from the sensor spread across space and time.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Network</h2>
+    <figure>
+      <img src="../img/phm-network.jpg" alt="Network architecture diagram for fault classification" loading="lazy">
+      <figcaption>The network architecture for classifying fault types.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Talk</h2>
+    <div class="video">
+      <iframe src="https://www.youtube-nocookie.com/embed/kuyhhvMJwpQ" title="Dynamic Vision-Enabled Machine Condition Monitoring: Oral Presentation" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section>
+    <h2>Citation</h2>
+    <pre class="bib">@inproceedings{xu2024dynamic,
+  title     = {Dynamic Vision-Enabled Machine Condition Monitoring:
+               A Point Cloud-Based Diagnostic Methodology},
+  author    = {Xu, Tongmiao and Cai, Dehao and Yang, Shaojie and Gu, Shuai and Li, Xiang},
+  booktitle = {2024 Global Reliability and Prognostics and Health Management Conference (PHM-Beijing)},
+  year      = {2024}
+}</pre>
+  </section>
+
+  <footer>© Tongmiao Xu · <a href="../">All projects</a></footer>
+</div>
+</body>
+</html>
